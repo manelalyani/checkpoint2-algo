@@ -9,4 +9,22 @@ BEGIN
         write("The dot product is"ps)
     END_IF
     
+    END
+    ALGORITHM doc product cal
+    VAR
+       i,j :INTEGER;
+    v1,v2 : ARRAY_OF INTEGER[2];
+    BEGIN
+        s write("Type the number of paire");
+    read(n);
+    FOR i FROM 1 TO max n step DO
+       
+        read(v1[0]);
+        read(v1[1]);
+        read(v2[0]);
+        read(v2[1]);
+        dot_product(v1,v2);
+    END_FOR
+    
+    END
 END

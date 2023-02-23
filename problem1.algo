@@ -2,8 +2,8 @@ ALGORITHM problem1
 VAR
    sum:INTEGER
    i,j:INTEGER;
-   t1:tab  ARRAY_OF INTEGER[];
-   tab : tab  ARRAY_OF INTEGER[];
+   t1: ARRAY_OF INTEGER[];
+   tab : ARRAY_OF INTEGER[];
  b:BOOLEAN
 BEGIN
  write("inter the element of table") 
@@ -13,10 +13,10 @@ read(t2[j]);
 FOR i FROM 0 TO length-1(i) STEP step  DO
 FOR j FROM 1 TO length-1(j) STEP step  DO
    
-    if (t1[i]#t2[j])THEN
+    if (t1[i]<>t2[j])THEN
        k:= t1[i];
      b:=false    
-     if (t1[i]=t2[j])THEN 
+    if (t1[i]=t2[j])THEN 
      b:=true  
 
 END_FOR
