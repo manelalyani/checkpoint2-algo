@@ -7,12 +7,14 @@ VAR
 
 BEGIN
 write("enter the phrase")
+  DO
    read(ch);
+ ch='.';
    nb:=length(ch);
    i:=0;
    FOR i FROM 1  TO length(ch) step  DO
-IF ( C +'.') THEN
-nb:=nb+1;
+      IF ( C +'.') THEN
+      nb:=nb+1;
     
 END_IF
 i:=i+1;
