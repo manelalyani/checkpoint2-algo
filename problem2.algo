@@ -1,0 +1,12 @@
+PROCEDURE Dot produc(v1,v2 ARRAY_OF INTEGER[2];)
+VAR
+ ps : INTEGER;   
+BEGIN
+  ps := (v1[0]*v2[0]) + (v1[1]*v2[1])
+    IF (ps = 0) THEN
+        write("The vectors of given IR  are ortoghonal");
+    ELSE
+        write("The dot product is"ps)
+    END_IF
+    
+END
