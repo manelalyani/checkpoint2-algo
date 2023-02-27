@@ -1,30 +1,40 @@
-PROCEDURE Dot produc(v1,v2 ARRAY_OF INTEGER[2];)
-VAR
- ps : INTEGER;   
+PROCEDURE Dot product(v1,v2 ARRAY_OF FLOAT,VAR ps : fleat)
+VAR   
+i:INTEGER
 BEGIN
-  ps := (v1[0]*v2[0]) + (v1[1]*v2[1])
-    IF (ps = 0) THEN
-        write("The vectors of given IR  are ortoghonal");
-    ELSE
-        write("The dot product is"ps)
-    END_IF
-    
-    END
-    ALGORITHM doc product cal
-    VAR
-       i,j :INTEGER;
-    v1,v2 : ARRAY_OF INTEGER[2];
-    BEGIN
-        s write("Type the number of paire");
-    read(n);
-    FOR i FROM 1 TO max n step DO
-       
-        read(v1[0]);
-        read(v1[1]);
-        read(v2[0]);
-        read(v2[1]);
-        dot_product(v1,v2);
+  FOR i FROM 0 TO v1.length-1 STEP 1  DO
+       ps:=ps+v1[i]*v2[i]
     END_FOR
-    
     END
+FUNCTION dot_product(v1,v2: ARRAY_OF FLOAT) : FLOAT
+    VAR
+        ps:FLOAT;
+        i:INTEGER
+    BEGIN
+        ps :=0;
+     FOR i FROM 0 TO v1.length-1 STEP step  DO
+         ps =ps+v1[i]*v2[i]
+         END_FOR
+    RETURN ps ;
+ END
+
+    ALGORITHM dot product
+    VAR
+       i:INTEGER;
+    v1,v2 : ARRAY_OF INTEGER;
+    ps:fleat
+    BEGIN
+    ps:=0;
+    read(n);
+    FOR i FROM 1 TO n-1 step DO
+       IF (v1.length<>v2.length) THEN
+   dot_product(v1,v2);
+     END_IF
+  IF (ps=0) THEN
+            write("les deux vecteurs sont orthgonaux")
+        ELSE
+            write("les deux vecteurs ne sont pas orthgonaux")
+        END_IF
+        
+
 END
